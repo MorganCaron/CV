@@ -1,0 +1,18 @@
+{
+	"name": "cv",
+	"version": "1.0.0",
+	"description": "Morgan Caron",
+	"scripts": {
+		"dev": "webpack serve --open --mode development",
+		"build": "webpack --mode production"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"custom-element-ts": "^1.0.5",
+		"nootstrap-ui": "^1.0.7",
+		"raw-loader": "^4.0.2",
+		"webpack-config-generator": "^1.5.1"
+	},
+	"dependencies": {}
+}
