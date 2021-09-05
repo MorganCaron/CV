@@ -9,6 +9,10 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"webpack-config-generator": "^1.1.1"
-	}
+		"custom-element-ts": "^1.0.5",
+		"nootstrap-ui": "^1.0.7",
+		"raw-loader": "^4.0.2",
+		"webpack-config-generator": "^1.5.1"
+	},
+	"dependencies": {}
 }
