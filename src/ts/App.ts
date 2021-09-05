@@ -32,22 +32,23 @@ class App extends HTMLElement {
 
 	connected() {
 		const routes = ["", "software", "web"]
-		routes.forEach(route => {
-			this.m_router.addRoute({
-				path: route,
-				controller: (...parameters: any[]) => {
-					this.beforePageChanging()
-					const style = this.querySelector("#style")
-					if (!style) return;
-					style.innerHTML = (route === "") ? "section.all, section.software, section.web, article.all, article.software, article.web { display: block; } span.all, span.software, span.web, li.all, li.software, li.web { display: inline; }" : `section.${route}, article.${route} { display: block; } span.${route}, li.${route} { display: inline; }`
-					this.afterPageChanging()
-				}
-			})
+		this.m_router.addRoute({
+			path: 'CV\\/?((.*))?',
+			controller: (...parameters: string[]) => {
+				console.log(parameters)
+				const route = (parameters?.length > 0 && parameters[0]) ? parameters[0] : ''
+				console.log(route)
+				this.beforePageChanging()
+				const style = this.querySelector("#style")
+				if (!style) return;
+				style.innerHTML = (route === "") ? "section.all, section.software, section.web, article.all, article.software, article.web { display: block; } span.all, span.software, span.web, li.all, li.software, li.web { display: inline; }" : `section.${route}, article.${route} { display: block; } span.${route}, li.${route} { display: inline; }`
+				this.afterPageChanging()
+			}
 		})
 
 		this.querySelector('#filter')?.addEventListener('change', (event: any) => {
 			const filter = event.target.options[event.target.selectedIndex].value
-			this.m_router.navigate(filter !== 'all' ? filter : '')
+			this.m_router.navigate('CV/' + (filter !== 'all' ? filter : ''))
 		}, false)
 
 		this.m_router.listen()
