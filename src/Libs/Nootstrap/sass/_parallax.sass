@@ -1,0 +1,16 @@
+.container .parallax, .container-fluid .parallax
+	position: relative
+	overflow: hidden
+	margin-left: -1rem
+	margin-right: -1rem
+	.parallax-background, .parallax-content
+		background-clip: border-box
+		padding-left: 1rem
+		padding-right: 1rem
+	.parallax-background
+		position: absolute
+		width: 100vw
+		z-index: -1
+		height: 100vh
+	.parallax-content
+		height: 100%

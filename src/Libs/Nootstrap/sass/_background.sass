@@ -1,0 +1,12 @@
+=grid-background($size, $thickness, $color)
+	background-image: linear-gradient($color $thickness, transparent $thickness), linear-gradient(90deg, $color $thickness, transparent $thickness)
+	background-size: $size $size
+
+=dotted-grid-background($size, $thickness, $color)
+	background-image: linear-gradient($color $thickness, transparent $thickness), linear-gradient(90deg, $color $thickness, transparent $thickness), radial-gradient($color 1px, transparent 0)
+	background-size: $size $size
+
+.text-background
+	background-clip: text
+	-webkit-background-clip: text
+	color: transparent

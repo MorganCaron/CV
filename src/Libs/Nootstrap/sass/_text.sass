@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300')
+
+body
+	font-family: 'Raleway', 'Roboto', 'Open Sans', sans-serif
+	font-weight: 300
+	font-size: 0.9rem
+	line-height: 1.5
+	background-color: white
+	color: #222
+	user-select: text
+
+h1, h2, h3, h4, h5, h6, p
+	margin: .5rem 0
+	font-weight: 300
+	line-height: 1.2
+	font-family: inherit
+	color: inherit
+
+h1
+	font-size: 3rem
+h2
+	font-size: 2rem
+h3
+	font-size: 1.75rem
+h4
+	font-size: 1.5rem
+h5
+	font-size: 1.25rem
+h6
+	font-size: 1rem
+
+p
+	user-select: text
+	margin-bottom: 1rem
+
+.lead
+	font-size: 1.2rem
+
+nav, img
+	user-select: none
+
+.select-none
+	user-select: none
+.select-text
+	user-select: text
+.select-all
+	user-select: all
+
+=ellipsis
+	overflow: hidden
+	text-overflow: ellipsis
+	line-height: 1.25
+
+.text-left
+	text-align: left
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+
+// sm, md, lg & xl
+@each $name, $value in $breakpoints
+	@media (min-width: $value)
+		.text-#{$name}-left
+			text-align: left
+		.text-#{$name}-center
+			text-align: center
+		.text-#{$name}-right
+			text-align: right
+
+pre
+	border: initial
+	background-color: initial
+	color: inherit
+	white-space: pre-line
+	word-break: break-word
+	word-wrap: break-word
+
+a
+	touch-action: manipulation
+	text-decoration: none
+	color: currentcolor
+	&:hover
+		text-decoration: none
+		filter: brightness(120%)
+	&:has(img)
+		display: inline-block
+
+.line-height-normal
+	line-height: 1

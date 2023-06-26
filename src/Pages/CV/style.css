@@ -1,0 +1,159 @@
+* {
+	transition: all 1s;
+}
+
+body {
+	--default-bg-color: #112255;
+}
+
+page-cv {
+	transform: translateZ(-10rem);
+}
+
+app-window {
+	transform: translate3d(35vw, 0, 10rem);
+}
+
+app-window > section {
+	font-size: 13px;
+	line-height: 1;
+}
+
+.primary {
+	background-color: #1a1c24;
+	border: 0 solid #1a1c24;
+	color: #eee;
+}
+
+.secondary {
+	background-color: #008cba;
+	border: 0 solid #008cba;
+	color: #eee;
+}
+
+header article::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15px;
+	height: 15px;
+	border-color: #1a1c24 #1a1c24 transparent transparent;
+	border-style: solid;
+	border-width: 15px;
+}
+
+header + hr {
+	border-top: 1rem solid #008cba;
+	border-bottom: 2rem solid #fff;
+	margin: 0;
+}
+
+.section h2 {
+	margin: 1rem 0;
+	padding-bottom: .2rem;
+	border-bottom: 2px solid currentcolor;
+}
+
+.section h3 {
+	margin: 1rem 0;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+h4 {
+	transform-origin: top left;
+	transform: translateX(-1rem) rotate(90deg);
+	white-space: nowrap;
+	position: absolute;
+}
+
+article {
+	margin-left: 2rem;
+}
+
+.section {
+	position: relative;
+	margin: .5rem;
+	padding: 1rem;
+	border-width: 2px;
+}
+
+li {
+	margin-bottom: 0.5rem;
+}
+
+.muted {
+	background-color: grey;
+	border: 0 solid grey;
+	color: #eee;
+}
+
+body {
+	--default-bg-color: #eee;
+	--default-color: #010101;
+}
+
+#cv-content > .container {
+	background-color: #fff;
+}
+
+app-window {
+	transform: translate3d(100vw, 0, 10rem) rotateY(-90deg);
+	opacity: 0;
+}
+
+::-webkit-scrollbar {
+	width: 0 !important;
+}
+
+page-cv.d-block {
+	transform: none;
+}
+
+body .page-corners {
+	background-image: none;
+}
+
+body.grid-background {
+	background-image: none;
+}
+
+#cv-content {
+	padding: 0px;
+}
+
+body app-main {
+	margin: 0px;
+	padding: 0px;
+}
+
+.bracket {
+	padding-left: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.bracket::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	left: -4px;
+	border-style: solid;
+	border-color: rgba(26, 28, 36, .25);
+	border-width: 2px 0 2px 2px;
+}
+
+.muted .bracket::before {
+	border-color: white;
+}
+
+* {
+	transition: all 0s;
+}
+
+app-window {
+	display: none;
+	transform: none;
+}

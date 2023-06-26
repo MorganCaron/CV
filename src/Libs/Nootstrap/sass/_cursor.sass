@@ -1,0 +1,25 @@
+@use "sass:map"
+
+=cursor
+	@media (min-width: map.get($breakpoints, 'sm'))
+		body, a, button
+			cursor: none
+	body
+		&:not(:hover)::before
+			transition: top 1s ease 1s, left 1s ease 1s
+			opacity: 0
+		&::before
+			display: block
+			content: ''
+			position: fixed
+			z-index: 1000
+			top: calc(var(--mouse-y) * 1px)
+			left: calc(var(--mouse-x)* 1px)
+			pointer-events: none
+			@extend .invisible
+			@extend .visible-sm
+			@content
+
+=cursor-hover
+	body:has(a:hover, button:hover)::before
+		@content

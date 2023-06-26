@@ -1,0 +1,49 @@
+$grid: '[class*="grid-"]'
+
+=grid($x, $y)
+	display: grid
+	--grid-width: calc(100% / $x)
+	--grid-height: calc(100% / $y)
+	grid-template: repeat($y, 1fr) / repeat($x, 1fr)
+
+.grid-12
+	+grid(12, 12)
+
+.grid-6
+	+grid(6, 6)
+
+.grid-3
+	+grid(3, 3)
+
+.grid-2
+	+grid(2, 2)
+
+// default & xs
+@for $i from 1 through 12
+	.tilex-#{$i}, .tilex-xs-#{$i}
+		grid-column-start: $i
+	.tilew-#{$i}, .tilew-xs-#{$i}
+		grid-column-end: $i span
+	.tiley-#{$i}, .tiley-xs-#{$i}
+		grid-row-start: $i
+	.tileh-#{$i}, .tileh-xs-#{$i}
+		grid-row-end: $i span
+
+// sm, md, lg & xl
+@each $name, $value in $breakpoints
+	@media (min-width: $value)
+		@for $i from 1 through 12
+			.tilex-#{$name}-#{$i}
+				grid-column-start: $i
+			.tilew-#{$name}-#{$i}
+				grid-column-end: $i span
+			.tiley-#{$name}-#{$i}
+				grid-row-start: $i
+			.tileh-#{$name}-#{$i}
+				grid-row-end: $i span
+
+// gutters
+#{$container}
+	&:not(.no-gutters) > #{$grid}:not(.no-gutters)
+		margin-left: -1rem
+		margin-right: -1rem

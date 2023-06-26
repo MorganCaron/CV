@@ -1,0 +1,17 @@
+.context-3d
+	transform-style: preserve-3d
+	perspective-origin: center
+	perspective: 50vw
+	*
+		transform-style: inherit
+
+=oriented($x, $y)
+	transform: rotateX($x) rotateY($y)
+
+.oriented-left
+	+oriented(0, -5deg)
+	transform-origin: right
+
+.oriented-right
+	+oriented(0, 5deg)
+	transform-origin: left

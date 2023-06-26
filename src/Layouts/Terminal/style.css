@@ -1,0 +1,22 @@
+app-terminal {
+	overflow: hidden;
+	font-family: monospace;
+	z-index: 1;
+}
+
+app-terminal > .line {
+	display: inline-block;
+	margin: 0;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+app-terminal > .line:last-child::after {
+	content: '█';
+	animation: blinker .7s step-start infinite;
+	color: currentColor;
+}

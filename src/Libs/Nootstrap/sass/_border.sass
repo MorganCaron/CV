@@ -1,0 +1,17 @@
+=corner-border($width, $thickness, $color)
+	$g: #0000 90deg, $color 0
+	$p: $width $width border-box no-repeat
+	border: $thickness solid #0000
+	background: conic-gradient(from 90deg at top $thickness left $thickness, $g) 0 0 / $p, conic-gradient(from 180deg at top $thickness right $thickness, $g) 100% 0 / $p, conic-gradient(from 0deg at bottom $thickness left $thickness, $g) 0 100% / $p, conic-gradient(from -90deg at bottom $thickness right $thickness, $g) 100% 100% / $p
+
+=corner-border-alt1($width, $thickness, $color)
+	$g: #0000 90deg, $color 0
+	$p: $width $width border-box no-repeat
+	border: $thickness solid #0000
+	background: conic-gradient(from 90deg at top $thickness left $thickness, $g) 0 0 / $p, conic-gradient(from -90deg at bottom $thickness right $thickness, $g) 100% 100% / $p
+
+=corner-border-alt2($width, $thickness, $color)
+	$g: #0000 90deg, $color 0
+	$p: $width $width border-box no-repeat
+	border: $thickness solid #0000
+	background: conic-gradient(from 180deg at top $thickness right $thickness, $g) 100% 0 / $p, conic-gradient(from 0deg at bottom $thickness left $thickness, $g) 0 100% / $p

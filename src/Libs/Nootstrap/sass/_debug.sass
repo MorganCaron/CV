@@ -1,0 +1,107 @@
+// Met en valeur les éléments inlines
+.debug-inline
+	ul, ol
+		outline: 1px solid blue
+	li
+		outline: 1px solid aqua
+	h1, h2, h3, h4, h5, h6, p, small, b, i, span
+		outline: 1px solid orange
+	a, button
+		outline: 1px solid red
+	*::after, *::before
+		outline: 1px solid yellow
+	hr
+		outline: 1px solid white
+
+// Met en valeur les éléments blocks
+.debug-block
+	#{$container}
+		outline: 1px solid $blue
+	.row
+		background-color: $darkgrey
+		background-image: linear-gradient(90deg, transparent 98%, rgba($silver, .2) 98%)
+		background-size: calc(100% / 12) 100%
+		outline: 1px solid rgba($blue, .5)
+		#{$col}
+			background-color: rgba($silver, .8)
+			outline: 1px solid rgba(grey, .75)
+	#{$grid}
+		background-color: $darkgrey
+		background-image: linear-gradient(90deg, transparent 50%, rgba($silver, .1) 50%), linear-gradient(transparent 50%, rgba($silver, .1) 50%)
+		background-size: calc(var(--grid-width) * 2) calc(var(--grid-height) * 2)
+		> *
+			background-color: rgba($silver, .8)
+			outline: 1px solid rgba(grey, .75)
+
+// Affiche la legende d'un élément
+=addLegend
+	position: relative
+	&::before
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1000
+		padding-left: .25rem
+		padding-right: .25rem
+		border: 1px solid black
+		background-color: white
+		color: black
+		font-size: 1rem
+
+// Affiche les classes des containers, rows et columns
+=showLegend
+	#{$container}, .row, #{$col}
+		&:hover
+			&, > .container, > .container-fluid, > .row, > #{$col}
+				+addLegend
+	.container:hover::before
+		content: '.container'
+	.container-fluid:hover::before
+		content: '.container-fluid'
+	.row:hover
+		&::before
+			content: '.row'
+		> .col::before
+			content: '.col'
+		@for $size from 1 through 12
+			> .col-#{$size}::before
+				content: '.col-#{$size}'
+		@each $name, $value in $breakpoints
+			> .col-#{$name}::before
+				content: '.col-#{$name}'
+			@for $size from 1 through 12
+				> .col-#{$name}-#{$size}::before
+					content: '.col-#{$name}-#{$size}'
+
+// Affiche une vue explosée des columns et des tiles
+=debugExplode
+	@extend .debug-block
+	+showLegend
+	.row
+		transition: padding-top .2s ease-in-out
+		&:hover
+			padding-top: 2rem
+	#{$col}, [class*=tile]
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out
+	.row:hover
+		> .col, > [class*=col-]
+			transform: perspective(500px) rotate3d(1, 2, 0, 5deg) scale3d(.9, .9, .9)
+			opacity: .5
+			&:hover
+				transform: initial
+				opacity: 1
+	#{$grid}
+		&:hover > *
+			transform: perspective(500px) rotate3d(1, 2, 0, 5deg) scale3d(.9, .9, .9)
+			opacity: .5
+			&:hover
+				transform: initial
+				opacity: 1
+
+.debug, .debug-hover:hover
+	+debugExplode
+
+.debug-all, .debug-all-hover:hover
+	+debugExplode
+	@extend .debug-inline

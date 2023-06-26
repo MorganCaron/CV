@@ -1,0 +1,15 @@
+=tilt($size)
+	display: inline-block
+	overflow: hidden
+	transform-origin: top left
+	transform: skewX(7deg * $size)
+	padding: 0 1rem
+	& > *
+		display: inline-block
+		transform: skewX(-7deg * $size)
+
+@for $size from 1 through 5
+	.tilt-left-#{$size}
+		+tilt($size)
+	.tilt-right-#{$size}
+		+tilt(-$size)

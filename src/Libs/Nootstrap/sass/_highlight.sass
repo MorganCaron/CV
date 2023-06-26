@@ -1,0 +1,32 @@
+@keyframes highlighted-animation
+	from
+		background-size: 100% 100%
+		background-position: bottom right
+	50%
+		background-size: 0 100%
+		background-position: bottom right
+	50.01%
+		background-position: bottom left
+	100%
+		background-size: 100% 100%
+		background-position: bottom left
+
+=underline-hover($color)
+	text-decoration: none
+	background: linear-gradient(to top, $color 0%, $color 10%, transparent 10.01%) no-repeat
+	background-size: 0 100%
+	transition: background-size .3s, color .3s
+	&.underlined, &:hover
+		background-size: 100% 100%
+	&.underlined:hover
+		animation: highlighted-animation 1s both
+
+=highlight-hover($color)
+	text-decoration: none
+	background: linear-gradient(to top, $color 0%, $color 100%) no-repeat
+	background-size: 0 100%
+	transition: background-size .3s, color .3s
+	&.highlighted, &:hover
+		background-size: 100% 100%
+	&.highlighted:hover
+		animation: highlighted-animation 1s both

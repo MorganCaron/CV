@@ -1,0 +1,25 @@
+=scrollbar($width, $color, $background)
+	::-webkit-scrollbar
+		width: $width
+		height: $width
+	::-webkit-scrollbar-thumb
+		background-color: rgba($color, 0.8)
+		&:hover
+			background-color: $color
+	::-webkit-scrollbar-track, ::-webkit-scrollbar-corner
+		background-color: $background
+
+.scroll-snap-mandatory
+	scroll-snap-type: y mandatory
+
+.scroll-snap-proximity
+	scroll-snap-type: y proximity
+
+.scroll-snap-start
+	scroll-snap-align: start
+
+.scroll-snap-end
+	scroll-snap-align: end
+
+.scroll-snap-center
+	scroll-snap-align: center

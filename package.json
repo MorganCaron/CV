@@ -1,18 +1,20 @@
 {
-	"name": "cv",
-	"version": "1.0.0",
-	"description": "Morgan Caron",
+	"name": "morgan-caron-cv",
+	"author": "Morgan Caron",
+	"license": "GPL-3.0",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
-		"dev": "webpack serve --open --mode development",
-		"build": "webpack --mode production"
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
 	},
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
-		"custom-element-ts": "^1.0.5",
-		"nootstrap-ui": "^1.0.7",
-		"raw-loader": "^4.0.2",
-		"webpack-config-generator": "^1.5.1"
-	},
-	"dependencies": {}
+		"@vitejs/plugin-vue": "^4.2.3",
+		"sass": "^1.63.6",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.9",
+		"vite-raw-plugin": "^1.0.2"
+	}
 }

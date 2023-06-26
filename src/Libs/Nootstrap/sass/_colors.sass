@@ -1,0 +1,27 @@
+$black: #0D0D0E
+$darkgrey: #313439
+$midgrey: #676B72
+$grey: #BDBDBD
+$lightgrey: #D4D4D4
+$silver: #E0E1E1
+$aluminum: #F8F8F8
+
+$alpha-lightgrey: rgba($darkgrey, .3)
+$alpha-grey: rgba($darkgrey, .5)
+$alpha-darkgrey: rgba($darkgrey, .9)
+$blue: #008CBA
+$gold: #FFD700
+$aqua: #64E6E3
+$purple: #965FF9
+
+=colors($background-color, $color)
+	background-color: $background-color
+	border: 0px solid $background-color
+	color: $color
+	&.outline, &.invert
+		color: $background-color
+	&.outline
+		background-color: transparent
+		border-width: 1px
+	&.invert
+		background-color: $color

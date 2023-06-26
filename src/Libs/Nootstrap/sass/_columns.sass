@@ -1,0 +1,50 @@
+$col: '.col, [class*="col-"]'
+
+.row
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	align-content: flex-start
+
+.col
+	flex-basis: 0
+	flex-grow: 1
+
+#{$col}
+	width: 100%
+
+// default & xs
+@for $width from 1 through 12
+	.col-#{$width}, .col-xs-#{$width}
+		flex-basis: calc(($width / 12) * 100%)
+		max-width: calc(($width / 12) * 100%)
+@for $width from 0 through 5
+	.scale-#{$width}
+			transform: scale(calc(($width + 1) * 1 / 5))
+
+// sm, md, lg & xl
+@each $name, $value in $breakpoints
+	@media (min-width: $value)
+		.container
+			max-width: $value
+		.col-#{$name}
+			flex-basis: 0
+			flex-grow: 1
+		@for $width from 1 through 12
+			.col-#{$name}-#{$width}
+				flex-basis: calc(($width / 12) * 100%)
+				max-width: calc(($width / 12) * 100%)
+		@for $width from 0 through 5
+			.scale-#{$name}-#{$width}
+				transform: scale(calc(($width + 1) * 1 / 5))
+
+// gutters
+#{$container}, .col, [class*="col-"]
+	&:not(.no-gutters) > .row
+		&:not(.no-gutters)
+			margin-left: -1rem
+			margin-right: -1rem
+		> .col, > [class*="col-"]
+			&:not(.no-gutters)
+				padding-left: 1rem
+				padding-right: 1rem

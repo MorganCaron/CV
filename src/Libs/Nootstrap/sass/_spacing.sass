@@ -1,0 +1,71 @@
+$spacer: 1rem
+
+.m-auto
+	margin: auto !important
+.ml-auto
+	margin-left: auto !important
+.mr-auto
+	margin-right: auto !important
+.mt-auto
+	margin-top: auto !important
+.mb-auto
+	margin-bottom: auto !important
+.mx-auto
+	margin-left: auto !important
+	margin-right: auto !important
+.my-auto
+	margin-top: auto !important
+	margin-bottom: auto !important
+
+@for $size from 0 through 5
+	.m-#{$size}
+		margin: $spacer * $size * .25 !important
+	.mx-#{$size}
+		margin-left: $spacer * $size * .25 !important
+		margin-right: $spacer * $size * .25 !important
+	.my-#{$size}
+		margin-top: $spacer * $size * .25 !important
+		margin-bottom: $spacer * $size * .25 !important
+	.ml-#{$size}
+		margin-left: $spacer * $size * .25 !important
+	.mt-#{$size}
+		margin-top: $spacer * $size * .25 !important
+	.mr-#{$size}
+		margin-right: $spacer * $size * .25 !important
+	.mb-#{$size}
+		margin-bottom: $spacer * $size * .25 !important
+
+.p-auto
+	padding: auto !important
+.pl-auto
+	padding-left: auto !important
+.pr-auto
+	padding-right: auto !important
+.pt-auto
+	padding-top: auto !important
+.pb-auto
+	padding-bottom: auto !important
+.px-auto
+	padding-left: auto !important
+	padding-right: auto !important
+.py-auto
+	padding-top: auto !important
+	padding-bottom: auto !important
+
+@for $size from 0 through 5
+	.p-#{$size}
+		padding: $spacer * $size * .25 !important
+	.px-#{$size}
+		padding-left: $spacer * $size * .25 !important
+		padding-right: $spacer * $size * .25 !important
+	.py-#{$size}
+		padding-top: $spacer * $size * .25 !important
+		padding-bottom: $spacer * $size * .25 !important
+	.pl-#{$size}
+		padding-left: $spacer * $size * .25 !important
+	.pt-#{$size}
+		padding-top: $spacer * $size * .25 !important
+	.pr-#{$size}
+		padding-right: $spacer * $size * .25 !important
+	.pb-#{$size}
+		padding-bottom: $spacer * $size * .25 !important

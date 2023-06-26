@@ -1,0 +1,20 @@
+@each $name, $value in $breakpoints
+	.invisible:not(.visible)
+		visibility: hidden
+		max-width: 0
+		max-height: 0
+	.visible-#{$name}
+		&:not(.visible)
+			visibility: hidden
+			max-width: 0
+			max-height: 0
+	@media (min-width: $value)
+		.invisible-#{$name}
+			&:not(.visible)
+				visibility: hidden !important
+				max-width: 0
+				max-height: 0
+		.visible-#{$name}
+			visibility: visible !important
+			max-width: none !important
+			max-height: none !important
