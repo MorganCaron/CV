@@ -315,7 +315,6 @@ page-cv {\r
 \r
 app-window {\r
 	transform: translate3d(35vw, 0, 10rem);\r
-	display: none;\r
 }\r
 \r
 app-window > section {\r
