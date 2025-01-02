@@ -73,7 +73,7 @@
 								<p>Etudes sur 5 ans dans l'école d'Expertise en Informatique Epitech.</p>
 							</div>
 							<div class="col-2">
-								<img src="/img/epitech.png" alt="Logo Epitech" class="img-fluid">
+								<img src="img/epitech.png" alt="Logo Epitech" class="img-fluid">
 							</div>
 						</div>
 					</article>
