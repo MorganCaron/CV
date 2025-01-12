@@ -86,8 +86,20 @@
 				<section>
 					<h3><i class="las la-toolbox"></i> Expériences</h3>
 					<article class="bracket">
+						<div class="row">
+							<div class="col-10">
+								<h4>CDD · SGDSN (3 ans)</h4>
+								<h5>Services du Premier ministre<br><small>Software Engineer · Développeur C++ – Depuis le 12 décembre 2023, poste actuel</small></h5>
+							</div>
+							<div class="col-2">
+								<img src="img/services_pm.jpg" alt="Logo Services Premier Ministre" class="img-fluid">
+							</div>
+						</div>
+					</article>
+					<br>
+					<article class="bracket">
 						<h4>CDI · Groupe SII (2 ans)</h4>
-						<h5>Thales SIX GTS<br><small>Software Engineer · Développeur C++17 – Depuis le 01 octobre 2021, poste actuel</small></h5>
+						<h5>Thales SIX GTS<br><small>Software Engineer · Développeur C++17 – Du 01 octobre 2021 au 08 décembre 2023</small></h5>
 						<p>
 							<strong>Software Engineer Développeur C++17 Full-Stack React / C# .NET</strong><br>
 							<strong>Technologies</strong>: C++17, Python, Java, Visual Studio, Git, Windows<br>
@@ -103,7 +115,7 @@
 					<br>
 					<article class="bracket">
 						<h4>Année Sabbatique</h4>
-						<h5>Projet Script<small> · Projet Personnel – Du 01 octobre 2020 à 30 septembre 2021 (1 an)</small></h5>
+						<h5>Projet Script<small> · Projet Personnel – Du 01 octobre 2020 au 30 septembre 2021 (1 an)</small></h5>
 						<p class="lead">Projet réalisé en C++20</p>
 						<p>
 							<strong>Création d'un langage de programmation et de son compilateur (from scratch).</strong><br>
@@ -115,19 +127,19 @@
 					<br>
 					<article class="bracket">
 						<h4>Alternance · Viseo Technologies (2 ans)</h4>
-						<h5>Celine<br><small> – Du 01 avril 2019 à 30 septembre 2020 (18 mois)</small></h5>
+						<h5>Celine<br><small> – Du 01 avril 2019 au 30 septembre 2020 (18 mois)</small></h5>
 						<p>
 							<strong>Développeur Full-Stack React / C# .NET</strong><br>
 							<strong>Technologies</strong>: C#, .Net Core, Typescript, NodeJS, React, Webpack, Azure DevOps, BlobStorage<br>
 							<strong>Méthodologie</strong>: Agile (Scrum, Kanban)
 						</p>
-						<h5>Pernod Ricard<br><small> – Du 01 novembre 2018 à 31 mars 2019 (5 mois)</small></h5>
+						<h5>Pernod Ricard<br><small> – Du 01 novembre 2018 au 31 mars 2019 (5 mois)</small></h5>
 						<p>
 							<strong>Développeur Back-End C# .NET</strong><br>
 							<strong>Technologies</strong>: C#, .Net Core, Azure DevOps, BlobStorage<br>
 							<strong>Méthodologie</strong>: Agile (Scrum, Kanban)
 						</p>
-						<h5>Projet R&D – Microsoft Hololens<br><small> – Du 01 octobre 2018 à 31 octobre 2018 (1 mois)</small></h5>
+						<h5>Projet R&D – Microsoft Hololens<br><small> – Du 01 octobre 2018 au 31 octobre 2018 (1 mois)</small></h5>
 						<p>
 							<strong>Développeur C# Unity</strong><br>
 							<strong>Technologies</strong>: Unity, API Hololens, C#<br>
@@ -512,5 +524,5 @@ app-window {\r
 	{{ baseContent }}\r
 </section>\r
 <button class="resize"></button>\r
-`;var yt=Object.defineProperty,Ct=Object.getOwnPropertyDescriptor,w=(e,t,n,r)=>{for(var s=r>1?void 0:r?Ct(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&yt(t,n,s),s};let f=class extends HTMLElement{constructor(e,t,n="5rem",r="5rem"){super(),this.caption="",this.anchorX=0,this.anchorY=0,this.moving=!1,this.resizing=!1,this.canMove=e,this.canResize=t,this.minWidth=300,this.minHeight=150,this.style.left=n,this.style.top=r,this.style.minWidth=this.minWidth+"px",this.style.minHeight=this.minHeight+"px",this.style.maxWidth="100%",this.style.maxHeight="100%"}connected(){var t,n,r,s;this.addEventListener("mousedown",this.setFocus.bind(this),!1),document.addEventListener("mouseup",this.unsetFocus.bind(this),!1);const e=this.querySelector("header");e==null||e.addEventListener("mousedown",this.moveGrab.bind(this),!1),document.addEventListener("mousemove",this.drag.bind(this),!1),document.addEventListener("mouseup",this.drop.bind(this),!1),(t=this.querySelector("button.resize"))==null||t.addEventListener("mousedown",this.resizeGrab.bind(this),!1),(n=e==null?void 0:e.querySelector(".minimize"))==null||n.addEventListener("mouseup",this.minimize.bind(this),!1),(r=e==null?void 0:e.querySelector(".expand"))==null||r.addEventListener("mouseup",this.expand.bind(this),!1),(s=e==null?void 0:e.querySelector(".close"))==null||s.addEventListener("mouseup",this.close.bind(this),!1)}setFocus(){this.style.zIndex="3"}unsetFocus(){this.moving=!1}moveGrab(e){if(!this.canMove)return;const t=this.getBoundingClientRect();this.moving=!0,this.anchorX=e.clientX-t.left,this.anchorY=e.clientY-t.top}drag(e){var n;const t=this.getBoundingClientRect();if(this.moving){const r=(n=this.parentElement)==null?void 0:n.getBoundingClientRect();r&&(this.style.left=Math.min(Math.max(r.left,e.clientX-this.anchorX),r.right-t.width)+"px",this.style.top=Math.min(Math.max(r.top,e.clientY-this.anchorY),r.bottom-t.height)+"px")}else this.resizing&&(this.style.width=String(Math.max(this.minWidth,e.clientX-t.left))+"px",this.style.height=String(Math.max(this.minHeight,e.clientY-t.top))+"px")}drop(){this.moving=!1,this.resizing=!1}resizeGrab(){this.resizing=this.canResize}minimize(){}expand(){}close(){this.animate([{opacity:1,transform:"translateY(0) scale(1)"},{opacity:0,transform:"translateY(5rem) scale(.5)"}],{duration:200,easing:"ease-out",iterations:1}),setTimeout(()=>{var e;(e=this.parentElement)==null||e.removeChild(this)},200)}};w([g()],f.prototype,"caption",2);w([g()],f.prototype,"moving",2);w([g()],f.prototype,"resizing",2);w([g()],f.prototype,"canResize",2);f=w([d({selector:"app-window",template:wt,removeContent:!0})],f);var Mt=Object.defineProperty,St=Object.getOwnPropertyDescriptor,_t=(e,t,n,r)=>{for(var s=r>1?void 0:r?St(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&Mt(t,n,s),s};let H=class extends HTMLElement{};H=_t([d({selector:"app-windows-area"})],H);var Pt=Object.defineProperty,Tt=Object.getOwnPropertyDescriptor,R=(e,t,n,r)=>{for(var s=r>1?void 0:r?Tt(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&Pt(t,n,s),s};let T=class extends HTMLElement{connected(){for(let e=0;e<Math.floor(this.stars);++e)this.addStar(0);this.stars%1!=0&&this.addStar(1);for(let e=Math.ceil(this.stars);e<5;++e)this.addStar(2)}addStar(e){const t=document.createElement("i");switch(e){case 0:{t.classList.add("las","la-star");break}case 1:{t.classList.add("las","la-star-half-alt");break}case 2:{t.classList.add("lar","la-star");break}}this.appendChild(t)}};R([g()],T.prototype,"stars",2);T=R([d({selector:"app-stars"})],T);const Et=`<app-router class="d-contents"></app-router>
-`;var xt=Object.defineProperty,Lt=Object.getOwnPropertyDescriptor,Dt=(e,t,n,r)=>{for(var s=r>1?void 0:r?Lt(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&xt(t,n,s),s};new X;let j=class extends HTMLElement{connected(){this.initRouter()}initRouter(){const e=this.querySelector("app-router");e.mode="hash",Array({path:"",component:M},{path:"projects",component:S},{path:"cv",component:_},{path:"about",component:P}).forEach(t=>e.addRoute(t)),e.listen()}};j=Dt([d({selector:"app-main",classes:"scroll-snap-proximity",template:Et})],j);
+`;var yt=Object.defineProperty,Ct=Object.getOwnPropertyDescriptor,w=(e,t,n,r)=>{for(var s=r>1?void 0:r?Ct(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&yt(t,n,s),s};let f=class extends HTMLElement{constructor(e,t,n="5rem",r="5rem"){super(),this.caption="",this.anchorX=0,this.anchorY=0,this.moving=!1,this.resizing=!1,this.canMove=e,this.canResize=t,this.minWidth=300,this.minHeight=150,this.style.left=n,this.style.top=r,this.style.minWidth=this.minWidth+"px",this.style.minHeight=this.minHeight+"px",this.style.maxWidth="100%",this.style.maxHeight="100%"}connected(){var t,n,r,s;this.addEventListener("mousedown",this.setFocus.bind(this),!1),document.addEventListener("mouseup",this.unsetFocus.bind(this),!1);const e=this.querySelector("header");e==null||e.addEventListener("mousedown",this.moveGrab.bind(this),!1),document.addEventListener("mousemove",this.drag.bind(this),!1),document.addEventListener("mouseup",this.drop.bind(this),!1),(t=this.querySelector("button.resize"))==null||t.addEventListener("mousedown",this.resizeGrab.bind(this),!1),(n=e==null?void 0:e.querySelector(".minimize"))==null||n.addEventListener("mouseup",this.minimize.bind(this),!1),(r=e==null?void 0:e.querySelector(".expand"))==null||r.addEventListener("mouseup",this.expand.bind(this),!1),(s=e==null?void 0:e.querySelector(".close"))==null||s.addEventListener("mouseup",this.close.bind(this),!1)}setFocus(){this.style.zIndex="3"}unsetFocus(){this.moving=!1}moveGrab(e){if(!this.canMove)return;const t=this.getBoundingClientRect();this.moving=!0,this.anchorX=e.clientX-t.left,this.anchorY=e.clientY-t.top}drag(e){var n;const t=this.getBoundingClientRect();if(this.moving){const r=(n=this.parentElement)==null?void 0:n.getBoundingClientRect();r&&(this.style.left=Math.min(Math.max(r.left,e.clientX-this.anchorX),r.right-t.width)+"px",this.style.top=Math.min(Math.max(r.top,e.clientY-this.anchorY),r.bottom-t.height)+"px")}else this.resizing&&(this.style.width=String(Math.max(this.minWidth,e.clientX-t.left))+"px",this.style.height=String(Math.max(this.minHeight,e.clientY-t.top))+"px")}drop(){this.moving=!1,this.resizing=!1}resizeGrab(){this.resizing=this.canResize}minimize(){}expand(){}close(){this.animate([{opacity:1,transform:"translateY(0) scale(1)"},{opacity:0,transform:"translateY(5rem) scale(.5)"}],{duration:200,easing:"ease-out",iterations:1}),setTimeout(()=>{var e;(e=this.parentElement)==null||e.removeChild(this)},200)}};w([g()],f.prototype,"caption",2);w([g()],f.prototype,"moving",2);w([g()],f.prototype,"resizing",2);w([g()],f.prototype,"canResize",2);f=w([d({selector:"app-window",template:wt,removeContent:!0})],f);var Mt=Object.defineProperty,St=Object.getOwnPropertyDescriptor,_t=(e,t,n,r)=>{for(var s=r>1?void 0:r?St(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&Mt(t,n,s),s};let j=class extends HTMLElement{};j=_t([d({selector:"app-windows-area"})],j);var Pt=Object.defineProperty,Tt=Object.getOwnPropertyDescriptor,R=(e,t,n,r)=>{for(var s=r>1?void 0:r?Tt(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&Pt(t,n,s),s};let T=class extends HTMLElement{connected(){for(let e=0;e<Math.floor(this.stars);++e)this.addStar(0);this.stars%1!=0&&this.addStar(1);for(let e=Math.ceil(this.stars);e<5;++e)this.addStar(2)}addStar(e){const t=document.createElement("i");switch(e){case 0:{t.classList.add("las","la-star");break}case 1:{t.classList.add("las","la-star-half-alt");break}case 2:{t.classList.add("lar","la-star");break}}this.appendChild(t)}};R([g()],T.prototype,"stars",2);T=R([d({selector:"app-stars"})],T);const Et=`<app-router class="d-contents"></app-router>
+`;var xt=Object.defineProperty,Lt=Object.getOwnPropertyDescriptor,Dt=(e,t,n,r)=>{for(var s=r>1?void 0:r?Lt(t,n):t,a=e.length-1,i;a>=0;a--)(i=e[a])&&(s=(r?i(t,n,s):i(s))||s);return r&&s&&xt(t,n,s),s};new X;let H=class extends HTMLElement{connected(){this.initRouter()}initRouter(){const e=this.querySelector("app-router");e.mode="hash",Array({path:"",component:M},{path:"projects",component:S},{path:"cv",component:_},{path:"about",component:P}).forEach(t=>e.addRoute(t)),e.listen()}};H=Dt([d({selector:"app-main",classes:"scroll-snap-proximity",template:Et})],H);
